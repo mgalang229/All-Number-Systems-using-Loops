@@ -8,7 +8,6 @@ int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	
-	// Works ONLY for Capital Letters
 	string s;
 	cin >> s;
 	int b=1, d=0;
@@ -18,6 +17,9 @@ int main() {
 			b*=16;
 		} else if(s[i]>='A'&&s[i]<='F') {
 			d+=(s[i]-55)*b;
+			b*=16;
+		} else if(s[i]>='a'&&s[i]<='f') {
+			d+=(s[i]-87)*b;
 			b*=16;
 		}
 	}
