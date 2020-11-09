@@ -17,7 +17,7 @@ int Power(int a, int b) {
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	int n;
+	ll n;
 	cin >> n;
 	// binary -> decimal -> hexadecimal process
 	int d = 0;
