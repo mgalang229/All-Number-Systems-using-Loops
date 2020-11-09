@@ -7,7 +7,8 @@ int main() {
 	cin.tie(0);
 	int n;
 	cin >> n;
-	int a[1000], cnt = 0;
+	int a[1000];
+	int cnt = 0;
 	while (n > 0) {
 		a[cnt++] = n % 2;
 		n /= 2;
