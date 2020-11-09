@@ -27,7 +27,8 @@ int main() {
 		n /= 10;
 		d += rem * Power(2, i);
 	}
-	int a[1000], cnt = 0;
+	int a[1000];
+	int cnt = 0;
 	for (int i = 0; d != 0; i++) {
 		a[cnt++] = d % 8;
 		d /= 8;
