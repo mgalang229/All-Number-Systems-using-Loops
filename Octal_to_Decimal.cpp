@@ -17,7 +17,6 @@ int Power(int a, int b) {
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	// Octal -> Decimal -> Binary Process
 	int n;
 	cin >> n;
 	int d = 0;
