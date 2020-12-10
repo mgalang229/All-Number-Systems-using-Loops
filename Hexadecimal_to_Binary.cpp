@@ -9,17 +9,6 @@ using namespace __gnu_pbds;
 typedef tree<int, null_type, less<int>, rb_tree_tag,
 tree_order_statistics_node_update> indexed_set;
 
-int power(int a, int b) {
-	int res=1;
-	while(b>0) {
-		if(b&1)
-			res*=a;
-		a*=a;
-		b/=2;
-	}
-	return res;
-}
-
 int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
