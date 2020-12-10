@@ -24,7 +24,6 @@ int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	
-	//octal->decimal->binary process
 	int n;
 	cin >> n;
 	int d=0, rem=0;
