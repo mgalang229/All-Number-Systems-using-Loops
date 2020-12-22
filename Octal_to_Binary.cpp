@@ -1,44 +1,39 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
+
 using namespace std;
-using namespace __gnu_pbds;
 
-#define ll long long
-#define ar array
-
-typedef tree<int, null_type, less<int>, rb_tree_tag,
-tree_order_statistics_node_update> indexed_set;
-
-int power(int a, int b) {
-	int res=1;
-	while(b>0) {
-		if(b&1)
-			res*=a;
-		a*=a;
-		b/=2;
+int Power(int a, int b) {
+	int res = 1;
+	while (b > 0) {
+		if (b % 2 == 1) {
+			res *= a;
+		}
+		a *= a;
+		b /= 2;
 	}
 	return res;
 }
 
 int main() {
-	ios::sync_with_stdio(0);
-	cin.tie(0);
-	
-	//octal->decimal->binary process
+	// octal to decimal to binary process
 	int n;
 	cin >> n;
-	int d=0, rem=0;
-	for(int i=0; n!=0; ++i) {
-		rem=n%10;
-		n/=10;
-		d+=rem*power(8, i);
+	int d = 0;
+	int rem = 0;
+	for (int i = 0; n != 0; i++) {
+		rem = n % 10;
+		n /= 10;
+		d += rem * Power(8, i);
 	}
-	int a[1000], cnt=0;
-	while(d>0) {
-		a[cnt++]=d%2;
-		d/=2;
+	int a[1000];
+	int cnt = 0;
+	while (d > 0) {
+		a[cnt++] = d % 2;
+		d /= 2;
 	}
-	for(int i=cnt-1; i>=0; --i)
+	for (int i = cnt - 1; i >= 0; i--) {
 		cout << a[i];
-	cout << "\n";
+	}
+	cout << '\n';
+	return 0;
 }
