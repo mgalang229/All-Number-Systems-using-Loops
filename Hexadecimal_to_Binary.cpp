@@ -4,17 +4,6 @@ using namespace std;
 #define ll long long
 #define ar array
 
-int power(int a, int b) {
-	int res=1;
-	while(b) {
-		if(b&1)
-			res*=a;
-		a*=a;
-		b/=2;
-	}
-	return res;
-}
-
 int main() {
 	//hex->decimal->binary process
 	string s;
