@@ -1,24 +1,34 @@
 #include <bits/stdc++.h>
-
 using namespace std;
+
+#define ll long long
+#define ar array
+
+int power(int a, int b) {
+	int res=1;
+	while(b) {
+		if(b&1)
+			res*=a;
+		a*=a;
+		b/=2;
+	}
+	return res;
+}
 
 int main() {
 	int n;
 	cin >> n;
 	char a[1000];
-	int cnt = 0;
-	while (n > 0) {
-		int tmp = n % 16;
-		if (tmp < 10) {
-			a[cnt++] = 48 + tmp;
-		} else {
-			a[cnt++] = 55 + tmp;
-		}
-		n /= 16;
+	int cnt=0;
+	while(n) {
+		int tmp=n%16;
+		if(tmp<10)
+			a[cnt++]=48+tmp;
+		else
+			a[cnt++]=55+tmp;
+		n/=16;
 	}
-	for (int i = cnt - 1; i >= 0; i--) {
+	for(int i=cnt-1; i>=0; --i)
 		cout << a[i];
-	}
-	cout << '\n';
-	return 0;
+	cout << "\n";
 }
