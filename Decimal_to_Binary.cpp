@@ -12,8 +12,8 @@ int main() {
 	cin >> n;
 	int a[1000], cnt=0;
 	while(n) {
-		a[cnt++]=n%8;
-		n/=8;
+		a[cnt++]=n%2;
+		n/=2;
 	}
 	for(int i=cnt-1; i>=0; --i)
 		cout << a[i];
