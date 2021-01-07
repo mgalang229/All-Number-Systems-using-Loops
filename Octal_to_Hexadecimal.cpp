@@ -15,7 +15,6 @@ int Power(int a, int b) {
 }
 
 int main() {
-	// octal > decimal > hexadecimal process
 	int n;
 	cin >> n;
 	int d = 0;
@@ -25,20 +24,6 @@ int main() {
 		n /= 10;
 		d += rem * Power(8, i);
 	}
-	char a[1000];
-	int cnt = 0;
-	while (d > 0) {
-		int tmp = d % 16;
-		if (tmp < 10) {
-			a[cnt++] = tmp + 48;
-		} else {
-			a[cnt++] = tmp + 55;
-		}
-		d /= 16;
-	}
-	for (int i = cnt - 1; i >= 0; i--) {
-		cout << a[i];
-	}
-	cout << '\n';
+	cout << d << '\n';
 	return 0;
 }
