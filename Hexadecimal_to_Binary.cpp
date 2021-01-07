@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-	// hexadecimal > decimal >  binary process
+	// hexadecimal > decimal > binary process
 	string s;
 	cin >> s;
 	int b = 1;
