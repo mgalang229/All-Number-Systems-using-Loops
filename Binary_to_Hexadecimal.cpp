@@ -15,7 +15,7 @@ int Power(int a, int b) {
 }
 
 int main() {
-	// binary > decimal > hexadecimal
+	// binary > decimal > hexadecimal process
 	long long n;
 	cin >> n;
 	int d = 0;
