@@ -15,8 +15,6 @@ int Power(int a, int b) {
 }
 
 int main() {
-	//ios::sync_with_stdio(false);
-	//cin.tie(0);
 	long long n;
 	cin >> n;
 	int d = 0;
