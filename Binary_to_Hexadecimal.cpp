@@ -5,7 +5,7 @@ using namespace std;
 int Power(int a, int b) {
 	int res = 1;
 	while (b > 0) {
-		if (b % 2 == 1) {
+		if (b & 1) {
 			res *= a;
 		}
 		a *= a;
@@ -15,7 +15,7 @@ int Power(int a, int b) {
 }
 
 int main() {
-	// binary > decimal > hexadecimal process
+	// binary > decimal > hexadecimal
 	long long n;
 	cin >> n;
 	int d = 0;
